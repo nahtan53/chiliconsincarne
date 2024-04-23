@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valparaiso</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="media/logo.png" alt="Mon logo">
+        </a>
+        <nav>
+          <ul>
+            <li><a href="Comida.html">Comida</a></li>
+            <li><a href="#boisson">Bebida</a></li>
+            <li><a href="#Musée">Museos</a></li>
+            <li><a href="#Description et raison du voyage">A propos de nous</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+    <div class="album-container">
+        <div class="album" id="Valparaiso">
+           <img id="imageChanger" src="media/Valparaiso/IMG_1771.JPG" alt="Cazuela">
+        </div>
+        <button class="prev" onclick="prevPhoto()">Précédent</button>
+        <button class="next" onclick="nextPhoto()">Suivant</button>
+      </div>
+
+      <script>
+        var currentIndices = 0;
+        var photosValparaiso = [
+      "media/Valparaiso/IMG_1771.JPG",
+      "media/Valparaiso/IMG_1779.JPG", 
+      "media/Valparaiso/IMG_1780.JPG",
+      "media/Valparaiso/IMG_1788.JPG",
+      "media/Valparaiso/IMG_1789.JPG", 
+      "media/Valparaiso/IMG_1790.JPG", 
+      "media/Valparaiso/IMG_1794.MP4", 
+      "media/Valparaiso/IMG_1795.JPG", 
+      "media/Valparaiso/IMG_1806.MP4", 
+      "media/Valparaiso/IMG_1808.MP4", 
+      "media/Valparaiso/IMG_1812.JPG", 
+      "media/Valparaiso/IMG_1816.MP4", 
+      "media/Valparaiso/IMG_1819.JPG", 
+      "media/Valparaiso/IMG_1827.JPG", 
+      "media/Valparaiso/IMG_1829.JPG", 
+      "media/Valparaiso/IMG_1833.JPG", 
+      "media/Valparaiso/IMG_1840.JPG", 
+      "media/Valparaiso/IMG_1850.JPG", 
+      "media/Valparaiso/IMG_1855.JPG", 
+      "media/Valparaiso/IMG_1856.JPG", 
+      "media/Valparaiso/IMG_1857.JPG", 
+      "media/Valparaiso/IMG_1859.JPG", 
+      "media/Valparaiso/IMG_1861.JPG", 
+      "media/Valparaiso/IMG_1863.JPG", 
+      "media/Valparaiso/IMG_1865.JPG", 
+      "media/Valparaiso/IMG_1868.JPG", 
+      "media/Valparaiso/IMG_1872.JPG", 
+      "media/Valparaiso/IMG_1874.JPG", 
+      "media/Valparaiso/IMG_1876.MP4",
+    ]
+
+    function nextPhoto() {
+      currentIndices = (currentIndices + 1) % photosValparaiso.length;
+      document.getElementById("imageChanger").src = photosValparaiso[currentIndices]
+    };
+
+    function prevPhoto() {
+      currentIndices = (currentIndices - 1 + photosValparaiso.length)% photosValparaiso.length;
+      document.getElementById("imageChanger").src = photosValparaiso[currentIndices]
+    };
+      </script>
+
+</body>
+</html>

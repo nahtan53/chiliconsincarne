@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vina Del Mar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="media/logo.png" alt="Mon logo">
+        </a>
+        <nav>
+          <ul>
+            <li><a href="Comida.html">Comida</a></li>
+            <li><a href="#boisson">Bebida</a></li>
+            <li><a href="#Description et raison du voyage">A propos de nous</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+    <div class="album-container">
+        <div class="album" id="VinaDelMar">
+           <img id="imageChanger" src="media/Vina del mar/Cazuela.jpg" alt="Cazuela">
+        </div>
+        <button class="prev" onclick="prevPhoto(photosVina)">Précédent</button>
+        <button class="next" onclick="nextPhoto(photosVina)">Suivant</button>
+      </div>
+
+      <script>
+        var currentIndices = 0;
+        var  photosVina = [
+    "media/Vina del mar/Cazuela.jpg",
+    "media/Vina del mar/IMG_6938.jpg", 
+    "media/Vina del mar/IMG_6939.jpg", 
+    "media/Vina del mar/IMG_6942.jpg", 
+    "media/Vina del mar/IMG_6946.jpg", 
+    "media/Vina del mar/IMG_6944.MP4", 
+    "media/Vina del mar/IMG_6947.jpg", 
+    "media/Vina del mar/IMG_6930.MP4",
+  ]
+
+    function nextPhoto() {
+      currentIndices = (currentIndices + 1) % photosVina.length;
+      document.getElementById("imageChanger").src = photosVina[currentIndices]
+    };
+
+    function prevPhoto() {
+      currentIndices = (currentIndices - 1 + photosVina.length)% photosVina.length;
+      document.getElementById("imageChanger").src = photosVina[currentIndices]
+    };
+      </script>
+
+</body>
+</html>

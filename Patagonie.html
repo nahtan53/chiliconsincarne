@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patagonie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="media/logo.png" alt="Mon logo">
+        </a>
+        <nav>
+        </nav>
+      </header>
+    
+    <div class="album-container">
+        <div class="album" id="Patagonie">
+           <img id="imageChanger" src="media/Patagonie/IMG_7168.MOV" alt="Prout">
+        </div>
+        <button class="prev" onclick="prevPhoto()">Précédent</button>
+        <button class="next" onclick="nextPhoto()">Suivant</button>
+      </div>
+
+      <script>
+        var currentIndices = 0;
+        var photosPatagonie = [
+        "media/Patagonie/IMG_7169.HEIC",
+        "media/Patagonie/IMG_7170.HEIC",
+        "media/Patagonie/IMG_7171.MOV",
+        "media/Patagonie/IMG_7177.HEIC",
+        "media/Patagonie/IMG_7180.HEIC",
+        "media/Patagonie/IMG_7181.HEIC",
+        "media/Patagonie/IMG_7184.HEIC",
+        "media/Patagonie/IMG_7189.HEIC",
+        "media/Patagonie/IMG_7192.MOV",
+        "media/Patagonie/IMG_7193.HEIC",
+        "media/Patagonie/IMG_7194.HEIC",
+        "media/Patagonie/IMG_7195.HEIC",
+        "media/Patagonie/IMG_7197.HEIC",
+        "media/Patagonie/IMG_7199.HEIC",
+        "media/Patagonie/IMG_7200.HEIC",
+        "media/Patagonie/IMG_7201.HEIC",
+        "media/Patagonie/IMG_7204.HEIC",
+        "media/Patagonie/IMG_7205.MOV",
+        "media/Patagonie/IMG_7208.HEIC",
+        "media/Patagonie/IMG_7210.MOV",
+        "media/Patagonie/IMG_7211.HEIC",
+        "media/Patagonie/IMG_7212.HEIC",
+        "media/Patagonie/IMG_7213.HEIC",
+        "media/Patagonie/IMG_7214.MOV",
+        "media/Patagonie/IMG_7215.HEIC",
+        "media/Patagonie/IMG_7216.HEIC",
+        "media/Patagonie/IMG_7217.HEIC",
+        "media/Patagonie/IMG_7219.MOV",
+        "media/Patagonie/IMG_7220.HEIC",
+        "media/Patagonie/IMG_7225.HEIC",
+        "media/Patagonie/IMG_7229.HEIC",
+        "media/Patagonie/IMG_7232.HEIC",
+        "media/Patagonie/IMG_7233.HEIC",
+        "media/Patagonie/IMG_7234.HEIC",
+        "media/Patagonie/IMG_7235.HEIC",
+        "media/Patagonie/IMG_7237.HEIC",
+        "media/Patagonie/IMG_7238.HEIC",
+        "media/Patagonie/IMG_7239.MOV",
+        "media/Patagonie/IMG_7241.HEIC",
+        "media/Patagonie/IMG_7257.HEIC",
+        "media/Patagonie/IMG_7258.MOV",
+        "media/Patagonie/IMG_7259.HEIC",
+        "media/Patagonie/IMG_7262.heic",
+        "media/Patagonie/IMG_7263.heic",
+        "media/Patagonie/IMG_7268.HEIC",
+        "media/Patagonie/IMG_7272.MOV",
+        "media/Patagonie/IMG_7273.HEIC",
+        "media/Patagonie/IMG_7280.HEIC",
+        "media/Patagonie/IMG_7282.HEIC",
+    ]
+
+    function nextPhoto() {
+      currentIndices = (currentIndices + 1) % photosPatagonie.length;
+      document.getElementById("imageChanger").src = photosPatagonie[currentIndices]
+    };
+
+    function prevPhoto() {
+      currentIndices = (currentIndices - 1 + photosPatagonie.length)% photosPatagonie.length;
+      document.getElementById("imageChanger").src = photosPatagonie[currentIndices]
+    };
+      </script>
+
+</body>
+</html>

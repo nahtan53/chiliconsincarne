@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pucon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="media/logo.png" alt="Mon logo">
+        </a>
+        <nav>
+          <ul>
+            <li><a href="Comida.html">Comida</a></li>
+            <li><a href="#boisson">Bebida</a></li>
+            <li><a href="#Musée">Museos</a></li>
+            <li><a href="#Description et raison du voyage">A propos de nous</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+    <div class="album-container">
+        <div class="album" id="Pucon">
+           <img id="imageChanger" src="media/Pucon/IMG_7018.HEIC" alt="Caca">
+        </div>
+        <button class="prev" onclick="prevPhoto()">Précédent</button>
+        <button class="next" onclick="nextPhoto()">Suivant</button>
+      </div>
+
+      <script>
+        var currentIndices = 0;
+        var photosPucon = [
+            "media/Pucon/IMG_7020.MOV",
+            "media/Pucon/IMG_7022.HEIC",
+            "media/Pucon/IMG_7025.MOV",
+            "media/Pucon/IMG_7026.HEIC",
+            "media/Pucon/IMG_7027.MOV",
+            "media/Pucon/IMG_7031.MOV",
+            "media/Pucon/IMG_7033.MOV",
+            "media/Pucon/IMG_7036.HEIC",
+            "media/Pucon/IMG_7040.HEIC",
+            "media/Pucon/IMG_7043.HEIC",
+            "media/Pucon/IMG_7047.MOV",
+            "media/Pucon/IMG_7050.MOV",
+            "media/Pucon/IMG_7054.MOV",
+            "media/Pucon/IMG_7057.HEIC",
+            "media/Pucon/IMG_7059.MOV",
+            "media/Pucon/IMG_7061.HEIC",
+            "media/Pucon/IMG_7062.HEIC",
+            "media/Pucon/IMG_7064.MOV",
+            "media/Pucon/IMG_7065.MOV",
+            "media/Pucon/IMG_7066.HEIC",
+            "media/Pucon/IMG_7068.HEIC",
+            "media/Pucon/IMG_7069.HEIC",
+            "media/Pucon/IMG_7070.MOV",
+            "media/Pucon/IMG_7072.HEIC",
+            "media/Pucon/IMG_7075.HEIC",
+            "media/Pucon/IMG_7076.MOV",
+            "media/Pucon/IMG_7077.HEIC",
+            "media/Pucon/IMG_7078.HEIC",
+            "media/Pucon/IMG_7080.MOV",
+            "media/Pucon/IMG_7082.HEIC",
+            "media/Pucon/IMG_7084.heic",
+            "media/Pucon/IMG_7086.MOV",
+            "media/Pucon/IMG_7093.HEIC",
+            "media/Pucon/IMG_7094.HEIC",
+            "media/Pucon/IMG_7095.MOV",
+            "media/Pucon/IMG_7096.MOV",
+            "media/Pucon/IMG_7097.HEIC",
+            "media/Pucon/IMG_7098.MOV",
+            "media/Pucon/IMG_7101.HEIC",
+            "media/Pucon/IMG_7102.HEIC",
+            "media/Pucon/IMG_7105.HEIC",
+            "media/Pucon/IMG_7108.HEIC",
+            "media/Pucon/IMG_7112.HEIC",
+            "media/Pucon/IMG_7113.HEIC",
+            "media/Pucon/IMG_7118.MOV",
+            "media/Pucon/IMG_7126.MOV",
+            "media/Pucon/IMG_7127.HEIC",
+            "media/Pucon/IMG_7128.HEIC",
+            "media/Pucon/IMG_7132.HEIC",
+            "media/Pucon/1f4a1ede-76c6-45cc-a68f-450ad0143834.JPG",
+            "media/Pucon/4b41997f-2c85-4deb-80a3-a0271628f6b2.JPG",
+            "media/Pucon/26c7ffa7-de3e-4be4-a702-910b12eebf39.MP4",
+            "media/Pucon/41cc2e91-e0f7-4347-835f-1b9614d42028.JPG",
+            "media/Pucon/0047AC12-5F9D-484D-84A9-0E03D6000276.MP4",
+            "media/Pucon/750d6aa4-c5f0-490d-b5d1-a52522b3d341.JPG",
+            "media/Pucon/b4f09a20-cfa1-44f5-8dcc-f2bce3813a9a.MP4",
+            "media/Pucon/ECBEAFD0-511B-4146-B833-F9DE7980ED85.JPG",
+    ]
+
+    function nextPhoto() {
+      currentIndices = (currentIndices + 1) % photosPucon.length;
+      document.getElementById("imageChanger").src = photosPucon[currentIndices]
+    };
+
+    function prevPhoto() {
+      currentIndices = (currentIndices - 1 + photosPucon.length)% photosPucon.length;
+      document.getElementById("imageChanger").src = photosPucon[currentIndices]
+    };
+      </script>
+
+</body>
+</html>
